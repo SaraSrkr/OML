@@ -81,7 +81,7 @@ import joblib
 # Get your best run and save the model from that run.
 
 ### YOUR CODE HERE ###
-In [ ]:
+
 from azureml.data.dataset_factory import TabularDatasetFactory
 
 # Create TabularDataset using TabularDatasetFactory
@@ -89,12 +89,12 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
 ### YOUR CODE HERE ###
-In [ ]:
+
 from train import clean_data
 
 # Use the clean_data function to clean your data.
 x, y = clean_data(### YOUR DATA OBJECT HERE ###)
-In [ ]:
+
 from azureml.train.automl import AutoMLConfig
 
 # Set parameters for AutoMLConfig
@@ -108,11 +108,11 @@ automl_config = AutoMLConfig(
     training_data=,
     label_column_name=,
     n_cross_validations=)
-In [2]:
+
 # Submit your automl run
 
 ### YOUR CODE HERE ###
-In [ ]:
+
 # Retrieve and save your best automl model.
 
 ### YOUR CODE HERE ###
