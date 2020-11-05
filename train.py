@@ -60,11 +60,7 @@ def main():
     run.log("Regularization Strength:", np.float(args.C))
     run.log("Max iterations:", np.int(args.max_iter))
 
-    ds =TabularDatasetFactory.from_delimited_files(['https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'])
-
-    x, y = clean_data (ds)
-
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
+    
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
 
@@ -74,5 +70,10 @@ def main():
 
 if __name__ == '__main__':
 
+    ds =TabularDatasetFactory.from_delimited_files(['https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'])
+
+    x, y = clean_data (ds)
+
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
      
     main()
