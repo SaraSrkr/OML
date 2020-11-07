@@ -15,3 +15,9 @@ print('Best Run Id: ', best_run.id)
 print('\n Accuracy:', best_run_metrics['Accuracy'])
 
 best_run
+
+
+os.makedirs('outputs', exist_ok=True)
+joblib.dump(value=model, filename='outputs/diabetes_model.pkl')
+
+run.complete()
