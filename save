@@ -3,3 +3,15 @@ print(best_run.get_details()['runDefinition']['arguments'])
 
 print(best_run.get_file_names())
 model = best_run.register_model(model_name='sklearn-iris', model_path='outputs/model.joblib')
+
+import joblib
+# Get your best run and save the model from that run.
+
+best_run = hyperdrive_run.get_best_run_by_primary_metric()
+best_run_metrics = best_run.get_metrics()
+#parameter_values = best_run.get_details()['runDefinition']['Arguments']
+
+print('Best Run Id: ', best_run.id)
+print('\n Accuracy:', best_run_metrics['Accuracy'])
+
+best_run
