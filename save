@@ -21,3 +21,8 @@ os.makedirs('outputs', exist_ok=True)
 joblib.dump(value=model, filename='outputs/diabetes_model.pkl')
 
 run.complete()
+
+
+https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/work-with-data/datasets-tutorial/train-with-datasets/train-with-datasets.ipynb
+
+https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/classification-bank-marketing-all-features/auto-ml-classification-bank-marketing-all-features.ipynb
