@@ -31,3 +31,10 @@ https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-remote
 
 from azureml.core.experiment import Experiment
 experiment = Experiment(ws, 'automl_remote')
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
+df = pd.read_csv("your-local-file.csv")
+train_data, test_data = train_test_split(df, test_size=0.1, random_state=42)
+label = "label-col-name"
