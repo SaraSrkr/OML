@@ -38,3 +38,8 @@ from sklearn.model_selection import train_test_split
 df = pd.read_csv("your-local-file.csv")
 train_data, test_data = train_test_split(df, test_size=0.1, random_state=42)
 label = "label-col-name"
+
+client = ExplanationClient.from_run(best_run)
+engineered_explanations = client.download_model_explanation(raw=False)
+exp_data = engineered_explanations.get_feature_importance_dict()
+exp_data
