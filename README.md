@@ -7,14 +7,14 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: This dataset contains data about expected customers for bank markting and it has information about every customer and the last cuolmn with answers yes or no defined the customer subscribed for a term deposit"**
+**In 1-2 sentences, explain the problem statement: This dataset contains data about expected customers for bank markting and it has information about every customer and the last cuolmn with answers yes or no defined the customer subscribed for a term deposit and use two ways to compare between thier results"**
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a voting enasamble that is created by AutoMl phase"**
+**In 1-2 sentences, explain the solution: "The best performing model was a voting enasamble that is created by AutoMl phase where is accuracy matric score 0.951 and the hyperdrive method score 0.912"**
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+**create the workcpace and expermint then create cluster compute, in train.py file create tapluat dataset from the given link and use clean data method to git best possible result and apply split function to divide the dataset to train and test set, hyperparameter tuning parmeters are predefined and add random numpers around defult value , and classification algorithm is Accauracy .**
 
-**What are the benefits of the parameter sampler you chose?**
+**What are the benefits of the parameter sampler you chose? chose the random sapling from the defined parmeter  **
 
 **What are the benefits of the early stopping policy you chose?**
 
