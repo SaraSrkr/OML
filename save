@@ -55,3 +55,5 @@ def print_model(model, prefix=""):
             print()
 
 print_model(model)
+
+https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/classification-bank-marketing-all-features/auto-ml-classification-bank-marketing-all-features.ipynb
