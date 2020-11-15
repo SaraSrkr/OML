@@ -7,7 +7,7 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about expected customers for bank markting and it has information about every customer and the last cuolmn with answers yes or no defined the customer subscribed for a term deposit"**
+**In 1-2 sentences, explain the problem statement: This dataset contains data about expected customers for bank markting and it has information about every customer and the last cuolmn with answers yes or no defined the customer subscribed for a term deposit"**
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a voting enasamble that is created by AutoMl phase"**
 
