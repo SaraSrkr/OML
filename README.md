@@ -28,4 +28,4 @@ the performance of hyperdrive and the automl was close result in accuracy becaus
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
-try using different policy factors or different sample parameters for hyperdrive to get better results  
+try using different policy factors or different parameter sampler for hyperdrive to get better results  
