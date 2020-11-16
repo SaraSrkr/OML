@@ -9,7 +9,7 @@ This model is then compared to an Azure AutoML run.
 ## Summary
 **In 1-2 sentences, explain the problem statement: This dataset contains data about expected customers for bank marketing and it has information about every customer and the last cuolmn with answers yes or no defined the customer subscribed for a term deposit and use two ways to compare between their results"**
 
-**In 1-2 sentences, explain the solution: "The best performing model was a voting enasamble that is created by AutoMl phase where is accuracy matric score 0.951 and the hyperdrive method score 0.912"**
+**In 1-2 sentences, explain the solution: "The best performing model was a voting enasamble that is created by AutoMl phase where is accuracy matric score 0.915 and the hyperdrive method score 0.912"**
 
 ## Scikit-learn Pipeline
 **create the workspace and experiment then create cluster compute, in train.py file create tabular dataset from the given link and use clean data method to git best possible result and apply split function to divide the dataset to train and test set, hyperparameter tuning parameters are predefined and add random numbers around default value , and classification algorithm is Logistic Regression .**
@@ -28,3 +28,4 @@ the performance of hyperdrive and the automl was close result in accuracy becaus
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
+try using different policy factors or different sample parameters for hyperdrive to get better results  
