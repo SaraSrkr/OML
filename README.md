@@ -9,7 +9,7 @@ This model is then compared to an Azure AutoML run.
 ## Summary
 **In 1-2 sentences, explain the problem statement: This dataset contains data about expected customers for bank marketing and it has information about every customer and the last cuolmn with answers yes or no defined the customer subscribed for a term deposit and use two ways to compare between their results"**
 
-**In 1-2 sentences, explain the solution: "The best performing model was a voting enasamble that is created by AutoMl phase where is accuracy matric score 0.915 and the hyperdrive method score 0.912"**
+**In 1-2 sentences, explain the solution: "The best performing model was a voting enasamble that is created by AutoMl phase where is accuracy matric score 0.915 and the hyperdrive method score 0.913"**
 
 ## Scikit-learn Pipeline
 **This pipeline use Hyperdrive tunning package which is a way to automate search through the parameters you defined to pick the best fitted by experiment multiple combinations between these parameters.
@@ -27,13 +27,17 @@ in the controller file we add random numbers around default value for hyperparam
 **What are the benefits of the early stopping policy you chose? defined after how much certain number of failures the experiment will stop looking for answers and in this case the slack factor which I chose 0.1 and intervals 3 and that mean stop the run and terminate it if its smaller than best run by 91% and 3 is the frequency for applying policy so stopping the failures running allow move to another parameter may it is the better for the model and that save time and resources and rise the experiment efficient **
 
 ## AutoML
-**In 1-2 sentences, in the AutoML we just need to put the task and prepare the data by clean data and train test split function and specify the target column which is 'y' to expect if the customer subscribe or not and also add compute target to apply the AutoML in the created cluster compute . Print the best run after finishing and retrieve the best model information which is Voting Ensembles that combines the predictions from multiple other models 
- **
+**In 1-2 sentences, in the AutoML lunch by config function that contain the task and prepared training data by clean data and train test split function and specify the target column which is 'y' to expect if the customer subscribe or not and also add compute target to apply the AutoML in the created cluster compute . Print the best run after finishing and retrieve the best model information which is Voting Ensembles that combines the predictions from multiple other models and in our case it used 3 paremeters : ensample itrations, weights and algorithm name (best_individual_iteration : 1 best_individual_pipeline_score : 0.9156730977671798 ensemble_weights : [0.21428571428571427, 0.35714285714285715, 0.07142857142857142, 0.07142857142857142, 0.07142857142857142, 0.07142857142857142, 0.07142857142857142, 0.07142857142857142] ensembled_algorithms : ['XGBoostClassifier', 'LightGBM', 'SGD', 'LightGBM', 'SGD', 'SGD', 'RandomForest', 'ExtremeRandomTrees'] ensembled_iterations : [1, 0, 13, 26, 9, 11, 17, 12] )
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
-the performance of hyperdrive and the automl was close result in accuracy because the chosen parameter and policy were fit and that come after multiple failures by wrong policy factors but with AutoMl the accuracy is better from the first time and the build way is easier and don’t need specifying termination policy or sample parameters 
+the performance of AutoMl model voting ensambles accuracy was better than the hyperdrive model
+the accuracy of Auto model is 0.9157 and for hyperdrive is 0.913
+in architecture the automl use data and aprove config to create different models in 29 iteration with accuaracy between 0.7286 and 0.9157 in 30 minutes and compare results then return voting ensambles model as the fitted model.
+Hyperdrive config has to use estimator entir train script to apply the Logistic Regression parmeters and this model find best parmeter runs which are ['--C', '0.05', '--max_iter', '149'] for one model 
+so I find the autoMl was easier and get best results
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
-try using different policy factors or different parameter sampler for hyperdrive to get better results  
+1- try using different policy factors or different parameter sampler for hyperdrive to get better results as using Bayesian sampling where I should reise the numer of itrations so consume more recources
+2- utilize the Automl model interpretation to apply the model with another feature from the top key features to improve the bank marketing abilities by predicting Employment variation rate or the call durationand also can apply negative or positive classification on them based on them results
