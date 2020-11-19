@@ -39,5 +39,5 @@ so I find the autoMl was easier and get best results
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
-1- try using different policy factors or different parameter sampler for hyperdrive to get better results as using Bayesian sampling where I should reise the numer of itrations so consume more recources
+1- try using different policy factors or different parameter sampler for hyperdrive to get better results as using Bayesian sampling where I should rise the number of itrations so consume more recources
 2- utilize the Automl model interpretation to apply the model with another feature from the top key features to improve the bank marketing abilities by predicting Employment variation rate or the call durationand also can apply negative or positive classification on them based on them results
